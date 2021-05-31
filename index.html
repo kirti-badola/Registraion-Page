@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registraion page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="title-text">
+			<div class="title login">Login Form</div>
+			<div class="title signup">Signup Form</div>
+		</div>
+
+		<div class="from-container">
+			<div class="slide-controls">
+				<input type="radio" name="slider" id="login" checked="checked">
+				<input type="radio" name="slider" id="signup">
+				<label for="login" class="slide login">Login</label>
+				<label for="signup" class="slide signup">Signup</label>
+				<div class="slide-tab"></div>
+		</div>
+			<div class="form-inner">
+<!--------------------------------------------------- login pgae --------------------------------------->
+				<form action="" class="login">
+					<div class="field">
+						<input type="email" name="" placeholder="Email Address" required="required">
+					</div>
+
+					<div class="field">
+						<input type="password" name="" placeholder="Password" required="required">
+					</div>
+
+					<div class="pass-link"><a href="#">Forgot password?</a></div>
+					<div class="field">
+						<input type="submit" value="Login">
+					</div>
+
+					<div class="signup-link">Don't have an account? <a href="#">Signup Now</a></div>
+
+				</form>
+<!--------------------------------------------------- signup pgae --------------------------------------->
+
+				<form action="reg_backend.php" class="signup">
+					<div class="field">
+						<input type="email" name="" placeholder="Email Address" required="required">
+					</div>
+
+					<div class="field">
+						<input type="password" name="" placeholder="password" required="required">
+					</div>
+
+					<div class="field">
+						<input type="password" name="" placeholder=" Confirm Password" required="required">
+					</div>
+
+					<div class="field">
+						<input type="submit" value="Signup">
+					</div>
+						
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+
+<script>
+	const loginform = document.querySelector("form.login");
+	const signupform = document.querySelector("form.signup");
+	const loginbtn = document.querySelector("label.login");
+	const signupbtn = document.querySelector("label.signup");
+	const signuplink = document.querySelector(".signup-link a");
+	const logintext = document.querySelector(".title-text .login");
+	const signuptext = document.querySelector(".title-text .signup");
+
+	signupbtn.onclick = (()=>{
+		loginform.style.marginLeft = "-50%";
+		logintext.style.marginLeft = "-50%";
+	});
+
+	loginbtn.onclick = (()=>{
+		loginform.style.marginLeft = "0%";
+		logintext.style.marginLeft = "0%"
+	});
+
+	signuplink.onclick = (()=>{
+		signupbtn.click();
+		return flase;
+	});
+
+</script>
+
+</body>
+</html>
